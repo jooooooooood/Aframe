@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LMC 2700 Aframe Project</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <a-assets>
+        <img id="plaster" src="images/white_plaster_02_diff_4k.jpg">
+
+        <a-asset-item
+          id="chair"
+          src="chair/dch.obj"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="chair-m"
+          src="chair/dch.mtl"
+        ></a-asset-item>
+
+      </a-assets>
+
+
+      <a-box  
+        color="light-blue"
+        src="images/white_plaster_02_diff_4k.jpg"
+        repeat="1 1"
+        normal-map="#plaster"
+        normal-texture-repeat="1 1"
+        normal-scale="1 -1"
+        roughness="0.5"
+        width="15" height="7" depth="1"
+        position="1 2 -7"
+        scale="-1 1 1"
+              >
+      </a-box>
+      <a-box  
+        color="light-blue"
+        src="images/white_plaster_02_diff_4k.jpg"
+        repeat="1 1"
+        normal-map="#plaster"
+        normal-texture-repeat="1 1"
+        normal-scale="1 -1"
+        roughness="0.5"
+        width="10" height="7" depth="1"
+        rotation="0 -90 0" 
+        position="-6 2 -2"
+              >
+      </a-box>
+
+      <a-box  
+        color="light-blue"
+        src="images/white_plaster_02_diff_4k.jpg"
+        repeat="1 1"
+        normal-map="#plaster"
+        normal-texture-repeat="1 1"
+        normal-scale="1 -1"
+        roughness="0.5"
+        width="10" height="7" depth="1"
+        rotation="0 -90 0" 
+        position="8 2 -2"
+              >
+      </a-box>
+
+      <a-box  
+        color="light-blue"
+        src="images/white_plaster_02_diff_4k.jpg"
+        repeat="1 1"
+        normal-map="#plaster"
+        normal-texture-repeat="1 1"
+        normal-scale="1 -1"
+        roughness="0.5"
+        width="15" height="7" depth="1"
+        position="1 2 3"
+              >
+      </a-box>
+
+      <!--floor-->
+      <a-plane 
+        position="0 0 0" 
+        rotation="-90 0 0" 
+        scale = "15 15 1"
+        color="black"></a-plane>
+      <!--sky-->
+      <a-sky color="#ECECEC"></a-sky>
+
+      <a-entity 
+      src="images/white_plaster_02_diff_4k.jpg"
+      obj-model="obj:#chair"
+      position="0 0 0"
+      scale="0.025 0.025 0.025"
+      ></a-entity>
+
+
+
+    </a-scene>
+  </body>
+</html>
