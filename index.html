@@ -31,6 +31,10 @@
           src="assets/tableobj.obj"
         ></a-asset-item>
 
+        <a-asset-item
+          id="door"
+          src="assets/scene.gltf"
+        ></a-asset-item>
       </a-assets>
 
       <!--side 1-->
@@ -167,6 +171,14 @@
       position="2 8 -5"
       light="type: ambient; color: #bf9b82; intensity: 0.5; groundColor: #ffffff"
       rotation="270 0 0">
+      </a-entity>
+
+      <!--door-->
+      <a-entity 
+      gltf-model="assets/scene.gltf"
+      position="2 4 -16.5"
+      rotation="0 270 0"
+      scale="1 4 4">
       </a-entity>
       
     </a-scene>
