@@ -9,20 +9,31 @@
 
       <a-assets>
         <img id="plaster" src="images/white_plaster_02_diff_4k.jpg">
+        <img id="tiles" src="images/tiled_floor_001_displacement_4k.png">
 
         <a-asset-item
           id="chair"
-          src="chair/dch.obj"
+          src="assets/dch.obj"
         ></a-asset-item>
 
         <a-asset-item
           id="chair-m"
-          src="chair/dch.mtl"
+          src="assets/dch.mtl"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="table-f"
+          src="assets/tableobj.obj"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="table"
+          src="assets/tableobj.obj"
         ></a-asset-item>
 
       </a-assets>
 
-
+      <!--side 1-->
       <a-box  
         color="light-blue"
         src="images/white_plaster_02_diff_4k.jpg"
@@ -31,11 +42,26 @@
         normal-texture-repeat="1 1"
         normal-scale="1 -1"
         roughness="0.5"
-        width="15" height="7" depth="1"
-        position="1 2 -7"
-        scale="-1 1 1"
+        width="30" height="14" depth="1"
+        position="1 3 -19"
+        scale="-1 1 4"
               >
       </a-box>
+
+      <a-box  
+      color="light-blue"
+      src="images/white_plaster_02_diff_4k.jpg"
+      repeat="1 1"
+      normal-map="#plaster"
+      normal-texture-repeat="1 1"
+      normal-scale="1 -1"
+      roughness="0.5"
+      width="30" height="14" depth="1"
+      position="1 3 13"
+            >
+    </a-box>
+
+      <!--side 2-->
       <a-box  
         color="light-blue"
         src="images/white_plaster_02_diff_4k.jpg"
@@ -44,9 +70,9 @@
         normal-texture-repeat="1 1"
         normal-scale="1 -1"
         roughness="0.5"
-        width="10" height="7" depth="1"
+        width="30" height="14" depth="1"
         rotation="0 -90 0" 
-        position="-6 2 -2"
+        position="-14 3 -2"
               >
       </a-box>
 
@@ -58,41 +84,60 @@
         normal-texture-repeat="1 1"
         normal-scale="1 -1"
         roughness="0.5"
-        width="10" height="7" depth="1"
+        width="30" height="14" depth="1"
         rotation="0 -90 0" 
-        position="8 2 -2"
+        position="16 3 -2"
               >
       </a-box>
 
-      <a-box  
-        color="light-blue"
-        src="images/white_plaster_02_diff_4k.jpg"
-        repeat="1 1"
-        normal-map="#plaster"
-        normal-texture-repeat="1 1"
-        normal-scale="1 -1"
-        roughness="0.5"
-        width="15" height="7" depth="1"
-        position="1 2 3"
-              >
-      </a-box>
+
 
       <!--floor-->
       <a-plane 
         position="0 0 0" 
         rotation="-90 0 0" 
-        scale = "15 15 1"
-        color="black"></a-plane>
+        scale = "50 50 1"
+        src="images/tiled_floor_001_displacement_4k.png"
+        color="white"
+        normal-map="#tiles"
+        repeat="4 4"
+        normal-texture-repeat="1 1"
+        normal-scale="1 -1"
+        roughness="0.5"
+        ></a-plane>
+        
       <!--sky-->
       <a-sky color="#ECECEC"></a-sky>
 
+      <!--chairs-->
       <a-entity 
-      src="images/white_plaster_02_diff_4k.jpg"
       obj-model="obj:#chair"
-      position="0 0 0"
-      scale="0.025 0.025 0.025"
+      position="7 0 -5"
+      scale="0.05 0.05 0.05"
+      rotation="0 -90 0" 
       ></a-entity>
 
+      <a-entity 
+      obj-model="obj:#chair"
+      position="-2 0 -5"
+      scale="0.05 0.05 0.05"
+      rotation="0 90 0" 
+      ></a-entity>
+
+      <a-entity 
+      obj-model="obj:#table; fbx-model:#table-f"
+      material="color: white"
+      position="1 3 -5"
+      scale="0.1 0.1 0.1"
+      rotation="0 90 0" 
+      ></a-entity>
+
+
+      <!--camera-->
+      <a-entity 
+      camera="active: true"
+      look-controls wasd-controls position="0 6 0" 
+      ></a-entity>
 
 
     </a-scene>
