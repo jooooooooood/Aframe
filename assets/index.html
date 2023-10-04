@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LMC 2700 Aframe Project</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <a-assets>
+        <img id="plaster" src="images/white_plaster_02_diff_4k.jpg">
+        <img id="tiles" src="images/tiled_floor_001_displacement_4k.png">
+        <img id="metal" src="images/painted_metal_shutter_diff_4k.jpg">
+    
+
+        <a-asset-item
+          id="chair"
+          src="assets/dch.obj"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="chair-m"
+          src="assets/dch.mtl"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="table-f"
+          src="assets/tableobj.obj"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="table"
+          src="assets/tableobj.obj"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="door"
+          src="assets/10057_wooden_door_v3_iterations-2.obj"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="door-m"
+          src="assets/10057_wooden_door_v3_iterations-2.mtl"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="mirror-m"
+          src="assets/mirror.mtl"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="mirror"
+          src="assets/mirror.obj"
+        ></a-asset-item>
+
+         <a-asset-item
+          id="lamp"
+          src="assets/Campanella SP1.obj"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="lamp-m"
+          src="assets/Campanella SP1.mtl"
+        ></a-asset-item>
+
+        <a-asset-item
+        id="handcuffs-m"
+        src="assets/handcuffs.mtl"
+      ></a-asset-item>
+
+      <a-asset-item
+        id="handcuffs"
+        src="assets/handcuffs.obj"
+      ></a-asset-item>
+
+      </a-assets>
+
+      <!--side 1-->
+      <a-box  
+        color="#b9ecfa"
+        src="images/white_plaster_02_diff_4k.jpg"
+        repeat="1 1"
+        normal-map="#plaster"
+        normal-texture-repeat="1 1"
+        normal-scale="1 -1"
+        roughness="0.5"
+        width="31" height="10" depth="1"
+        position="1 3 -17"
+        
+              >
+
+              <!--door-->
+              <a-entity 
+              obj-model="obj:#door; mtl:#door-m"
+              position="0 7 .7"
+              scale=".05 .05 .05"
+              rotation="90 180 0" 
+              shadow="cast: true"
+              shadow="recieve: true"
+              ></a-entity>
+              </a-box>
+      </a-box>
+
+      <a-box  
+      color="#b9ecfa"
+      src="images/white_plaster_02_diff_4k.jpg"
+      repeat="1 1"
+      normal-map="#plaster"
+      normal-texture-repeat="1 1"
+      normal-scale="1 -1"
+      roughness="0.5"
+      width="30" height="10" depth="1"
+      position="1 3 13"
+            >
+    </a-box>
+
+    <!--white sides-->
+    <a-box  
+        src="images/white_plaster_02_diff_4k.jpg"
+        repeat="1 1"
+        normal-map="#plaster"
+        normal-texture-repeat="1 1"
+        normal-scale="1 -1"
+        roughness="0.5"
+        width="31" height="7" depth="1"
+        position="1 11.5 -17"
+              >
+      </a-box>
+
+      <a-box  
+      src="images/white_plaster_02_diff_4k.jpg"
+      repeat="1 1"
+      normal-map="#plaster"
+      normal-texture-repeat="1 1"
+      normal-scale="1 -1"
+      roughness="0.5"
+      width="30" height="7" depth="1"
+      position="1 11.5 13"
+            >
+    </a-box>
+
+
+      <!--side 2-->
+      <a-box  
+        color="#b9ecfa"
+        src="images/white_plaster_02_diff_4k.jpg"
+        repeat="1 1"
+        normal-map="#plaster"
+        normal-texture-repeat="1 1"
+        normal-scale="1 -1"
+        roughness="0.5"
+        width="30" height="10" depth="1"
+        rotation="0 -90 0" 
+        position="-14 3 -2"
+              >
+          <!--windows-->
+          <a-box 
+            src="images/painted_metal_shutter_diff_4k.jpg"
+            repeat="1 1"
+            normal-map="#metal"
+            normal-texture-repeat="1 1"
+            normal-scale="1 1"
+            roughness="0.5"
+            width="3" height="7" depth=".5"
+            rotation="0 0 0" 
+            color="white"
+            position="-2 4 -.5"></a-box>
+         </a-box>
+
+
+      <a-box  
+        color="#b9ecfa"
+        src="images/white_plaster_02_diff_4k.jpg"
+        repeat="1 1"
+        normal-map="#plaster"
+        normal-texture-repeat="1 1"
+        normal-scale="1 -1"
+        roughness="0.5"
+        width="30" height="10" depth="1"
+        rotation="0 -90 0" 
+        position="16 3 -2"
+              >
+            <!--mirror-->
+            <a-entity 
+            obj-model="obj:#mirror; mtl:#mirror-m;"
+            position="-2 5 1"
+            scale="0.2 0.05 0.1"
+            rotation="-90 0 0" 
+            shadow="cast: true"
+            shadow="recieve: true"
+            ></a-entity>
+      </a-box>
+
+
+      <!--white sides-->
+      <a-box  
+        src="images/white_plaster_02_diff_4k.jpg"
+        repeat="1 1"
+        normal-map="#plaster"
+        normal-texture-repeat="1 1"
+        normal-scale="1 -1"
+        roughness="0.5"
+        width="30" height="7" depth="1"
+        rotation="0 -90 0" 
+        position="-14 11.5 -2"
+              >
+      </a-box>
+
+      
+      <a-box  
+        src="images/white_plaster_02_diff_4k.jpg"
+        repeat="1 1"
+        normal-map="#plaster"
+        normal-texture-repeat="1 1"
+        normal-scale="1 -1"
+        roughness="0.5"
+        width="30" height="7" depth="1"
+        rotation="0 -90 0" 
+        position="16 11.5 -2"
+              >
+      </a-box>
+
+      <!--ceiling-->
+      <a-box  
+        color="light-blue"
+        src="images/white_plaster_02_diff_4k.jpg"
+        repeat="1 1"
+        normal-map="#plaster"
+        normal-texture-repeat="1 1"
+        normal-scale="1 -1"
+        roughness="0.5"
+        width="30" height="1" depth="30"
+        rotation="0 0 0" 
+        position="1 15 -2"
+              >
+            <!--lamp-->
+            <a-entity 
+            obj-model="obj:#lamp; fbx:#lamp-m;"
+            position="2.5 -13 -2.5"
+            scale="4 4 4"
+            rotation="0 0 0" 
+            material="color:#5f5f5f"
+            shadow="cast: true"
+            shadow="recieve: true"
+            ></a-entity>
+      </a-box>
+
+      <!--floor-->
+      <a-plane 
+        position="0 0 0" 
+        rotation="-90 0 0" 
+        scale = "50 50 1"
+        src="images/tiled_floor_001_displacement_4k.png"
+        color="white"
+        normal-map="#tiles"
+        repeat="4 4"
+        normal-texture-repeat="1 1"
+        normal-scale="1 -1"
+        shadow="recieve: true"
+        ></a-plane>
+
+
+        
+      <!--sky-->
+      <a-sky color="#ECECEC"></a-sky>
+
+      <!--chairs-->
+      <a-entity 
+      obj-model="obj:#chair"
+      position="7 -.5 -5"
+      scale="0.06 0.06 0.06"
+      rotation="0 -90 0" 
+      shadow="cast: true"
+      shadow="recieve: true"
+      ></a-entity>
+
+      <a-entity 
+      obj-model="obj:#chair"
+      position="-1 0 -5"
+      scale="0.06 0.06 0.06"
+      rotation="0 90 0" 
+      shadow="cast: true"
+      shadow="recieve: true"
+      ></a-entity>
+
+      <!--table-->
+      <a-entity 
+      obj-model="obj:#table; fbx:#table-f"
+      material="color: white"
+      position="1 3.5 -5"
+      scale="0.12 0.2 0.14"
+      rotation="0 90 0" 
+      shadow="cast: true"
+      ></a-entity>
+
+      <!--handcuffs-->
+      <a-entity 
+      obj-model="obj:#handcuffs;"
+      material="color: #404040"
+      position="1 4 -5"
+      scale="0.15 0.15 0.15"
+      rotation="90 90 0" 
+      shadow="cast: true"
+      ></a-entity>
+
+      <!--camera-->
+      <a-entity 
+      camera="active: true"
+      position="-3.5 6 8"
+      rotation="0 30 0"
+      look-controls wasd-controls position="0 6 0" 
+      ></a-entity>
+
+      <!--spotlight-->
+      <a-entity 
+      position="2 8 -5" 
+      light="color: #ffffff; intensity: 0.5; type: spot" 
+      rotation="270 0 0">
+      </a-entity>
+      
+      <!--ambient light-->
+      <a-entity
+      position="2 13 -5"
+      light="type: ambient;
+            intensity: 0.5;
+            distance: 10
+            castShadow: true"
+     > 
+      </a-entity
+      position="2 8 -5"
+      light="type: ambient; color: #bf9b82; intensity: 0.5; groundColor: #ffffff"
+      rotation="270 0 0">
+      </a-entity>
+      
+    </a-scene>
+  </body>
+</html>
